@@ -4,7 +4,7 @@ USE store;
 -- Table: products
 CREATE TABLE products(
    product_id INT NOT NULL,
-   is_active ENUM('ACTIVE', 'INACTIVE', 'DELETED') NOT NULL,
+   status ENUM('ACTIVE', 'INACTIVE', 'DELETED') NOT NULL,
    name VARCHAR(100) NOT NULL UNIQUE,
    description VARCHAR(250),
    price DECIMAL(19, 4) NOT NULL,
@@ -32,7 +32,7 @@ CREATE TABLE transactions(
 CREATE TABLE orders(
    order_id INT NOT NULL,
    customer_id INT NOT NULL,
-   transaction_id INT NOT NULL,
+   transaction_id INT,
    status ENUM('CREATED', 'SHIPPED', 'COMPLETED', 'CANCELLED'),
    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
 );
