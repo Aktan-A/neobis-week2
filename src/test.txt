@@ -1,0 +1,9 @@
+How I tested:
+1. Created a local DB
+2. Created a separate user
+3. Opened Tableplus (DB Management Tool) and connected it to my local "store" DB
+4. Prepared the DB connection and CRUD classes
+5. Created a Main class which uses all four CRUD methods for the customers table
+6. I then commented all method calls but one and executed the main method
+7. Through Tableplus, I verified that a Customer record was created, updated and deleted
+8. For get method, I had it print to the console the full name and address of the returned customer which I made sure were correct
